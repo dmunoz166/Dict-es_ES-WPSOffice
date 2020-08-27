@@ -12,20 +12,21 @@ http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice-dictionaries/hunspel
 
 para que funcione como diccionario para WPS Office 2019
 
-lo que hice fue descargarlo y extraer su contendio y lo que necesitaba estaba aquí:
+# Instalación en Linux
+En mi caso estoy corriendo *Manjaro 20.1 Mikah* cuando voy a **Tools>Set language>** unicamente encuentro como lenguajes disponibles *English (United States)* ![SpellCheck](./img/spellcheck.png)
 
-usr/share/hunspell/es_ES.aff
-usr/share/hunspell/es_ES.dic
+El directorio donde se encuentran los diccionarios para WPS Office es `/usr/lib/office6/dicts/spellcheck/`, revisamos las unicas carpetas que se encuentran son en-EN, revisamos su contenido:
+```bash
+ls /usr/lib/office6/dicts/spellcheck/en_US                                                                       
+Changelog_en_US.txt  dict.conf	main.aff  main.dic  README_en_US.txt
+```
+- Clonamos el repo:
+```bash
+git clone https://github.com/dmunoz166/WPS-Office-Dict-es-ES/
+```
+- Movemos la carpeta `es_ES` al directorio:
 
-y cree una carpeta llamada:
-
-es_ES
-
-y allí los pegué. Además pegué allí también el archivo "dict.conf" que lo saqué de la página original de los diccionarios de http://wps-community.org/download/dicts cuando estaban en línea
-
-y al hacer esto si funciona
-
-Detalles del contacto: 
-
-Washington Indacochea Delgado
-wachin.id@gmail.com
+```
+mv .//es_ES /usr/lib/office6/dicts/spellcheck/
+```
+- Reiniciamos WPS para verificiar que podemos ver el nuevo dicccionario
