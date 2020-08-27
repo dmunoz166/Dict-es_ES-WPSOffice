@@ -1,4 +1,4 @@
-# Diccionario-de-correccion-ortografica-Español-WPS-Office
+# Instalar Diccionario Español a WPS Office
 
 Cuando uno descarga el diccionario español España para WPS Office desde:
 
@@ -10,10 +10,12 @@ no funciona para WPS Office 2019 por estar vacío el contenido de "main.dic"(que
 
 http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice-dictionaries/hunspell-es_6.0.3-3_all.deb 
 
-para que funcione como diccionario para WPS Office 2019
+para que funcione como diccionario para WPS Office es necesario copiar la carpeta es_ES a los diccionarios de correción de WPS.
 
 # Instalación en Linux
-En mi caso estoy corriendo *Manjaro 20.1 Mikah* cuando voy a **Tools>Set language>** unicamente encuentro como lenguajes disponibles *English (United States)* ![SpellCheck](./spellcheck.png?raw=true)
+En mi caso estoy corriendo WPS Office 2019 (v11.1.0.9615) *Manjaro 20.1 Mikah* cuando voy a **Tools>Set language>** unicamente encuentro como lenguajes disponibles *English (United States)* 
+
+![SpellCheck](./spellcheck.png?raw=true)
 
 El directorio donde se encuentran los diccionarios para WPS Office es `/usr/lib/office6/dicts/spellcheck/`, revisamos las unicas carpetas que se encuentran son en-EN, revisamos su contenido:
 ```bash
@@ -27,7 +29,7 @@ git clone https://github.com/dmunoz166/WPS-Office-Dict-es-ES/
 - Copiamos la carpeta `es_ES` al directorio de instalación, por que necesitaremos permisos de super usuario:
 
 ```
-sudo cp -r .//es_ES /usr/lib/office6/dicts/spellcheck/
+sudo cp -r ./Dict-es_ES-WPSOffice/es_ES /usr/lib/office6/dicts/spellcheck/
 ```
 - Reiniciamos WPS para verificiar que podemos ver el nuevo dicccionario 
 
