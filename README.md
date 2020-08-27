@@ -24,7 +24,7 @@ Changelog_en_US.txt  dict.conf	main.aff  main.dic  README_en_US.txt
 ```
 - Clonamos el repo:
 ```bash
-git clone https://github.com/dmunoz166/WPS-Office-Dict-es-ES/
+git clone https://github.com/dmunoz166/Dict-es_ES-WPSOffice.git
 ```
 - Copiamos la carpeta `es_ES` al directorio de instalación, por que necesitaremos permisos de super usuario:
 
